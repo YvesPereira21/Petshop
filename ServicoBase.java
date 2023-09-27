@@ -1,13 +1,16 @@
 import java.time.LocalDate;
 
 public abstract class ServicoBase implements Servico{
+
     private LocalDate data;
     private Integer codigo;
-    private String descricao;
+    private Double preco;
 
-    public ServicoBase(LocalDate data, Integer codigo, String descricao) {
-        this.data = data;
+    public ServicoBase(Integer codigo) {
+        this.data = LocalDate.now();
         this.codigo = codigo;
-        this.descricao = descricao;
+        this.preco = (double) 0;
     }
+
+
 }
